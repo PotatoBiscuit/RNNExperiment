@@ -1,3 +1,10 @@
+%This code trains the patternnet on a dataset divided by phones rather than timesteps
+%So, an answer array for this code would look something like this:
+
+%For phones 0 100 h#; 100 200 sh; 200 300 axr, where we are only looking to identify sh
+%[0 1 0]   <= Indicates if sh exists
+%[1 0 1]   <= Indicates if sh does not exist
+
 listing = dir('TEST');
 listing1 = dir('TRAIN');
 

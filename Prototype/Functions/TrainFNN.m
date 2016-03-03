@@ -1,0 +1,1 @@
+fprintf('\nTraining has been completed. Test the network to update the accuracy\n\n');

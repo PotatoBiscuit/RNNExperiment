@@ -6,4 +6,6 @@ If you want to run a Patternnet, just run any .m file.
 
 These are the basic files of my experimentation. If you want to see my other, slightly different attempts, I can put those up as well.
 
+A prototype has been added, to show what the sponsors will see when they use our product.
+
 You can also count phones using the CountPhones.m file.

@@ -52,7 +52,7 @@ function FindModule(NeuralNetwork)
             
             fprintf(['\nWhat module would you like to run?\n' ...
             '\n1.  TRAIN MULTIPLE\n2.  TEST MULTIPLE\n' ...
-            '3.  EXECUTE\n4.  EXECUTE MULTIPLE\n5.  BACK\n\n']);
+            '3.  EXECUTE\n4.  EXECUTE MULTIPLE\n5.  Back\n\n']);
             
             ModuleType = input('Input an integer: ');
             
@@ -77,12 +77,8 @@ function ModuleHandler(NeuralNetwork,ModuleType)
     if ModuleType == 1 
         if NeuralNetwork == 1
             TrainHMM;
-            FindModule(NeuralNetwork);
-            return;
         else
             TrainFNN;
-            FindModule(NeuralNetwork);
-            return;
         end
         
         
@@ -96,19 +92,15 @@ function ModuleHandler(NeuralNetwork,ModuleType)
                 return;
             else 
                 TestHMM;
-                FindModule(NeuralNetwork);
-                return;
             end
         else
              load('FNN');
-            if FNNAccuracy == 0
+            if HMMAccuracy == 0
                 fprintf('\nThe accuracy of the FNN must be above 0%% to test\nPlease train the accuracy\n');
                 FindModule(NeuralNetwork);
                 return;
             else 
                 TestHMM;
-                FindModule(NeuralNetwork);
-                return;
             end
         end     
        
@@ -123,8 +115,6 @@ function ModuleHandler(NeuralNetwork,ModuleType)
                 return;
             else
                 ExecuteHMM;
-                FindModule(NeuralNetwork);
-                return;
             end
         else 
             load('FNN');
@@ -134,8 +124,6 @@ function ModuleHandler(NeuralNetwork,ModuleType)
                 return;
             else
                 ExecuteFNN;
-                FindModule(NeuralNetwork);
-                return;
             end
         end
         

@@ -1,4 +1,4 @@
-fileID = fopen('SoundFile.phn','w');
+fileID = fopen('FNNSoundFile.phn','w');
 fprintf(fileID, '0 1000 h#\n');
 fprintf(fileID, '1000 2000 axr\n');
 fprintf(fileID, '2000 3000 sh\n');
@@ -15,4 +15,4 @@ fprintf(fileID, '12000 13000 axr\n');
 fprintf(fileID, '13000 14000 h#\n');
 fclose(fileID);
 
-fprintf('\n A new .phn file with your phones has been created\n\n');
+fprintf('\nA new .phn file with your phones has been created/n');
